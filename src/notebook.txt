@@ -1,0 +1,19 @@
+springboot访问静态文件一定要  resources:
+    static-locations: classpath:/
+
+@Mapper和@Repository
+@Mapper没有配置文件，可以直接在dao接口上写sql语句
+@Repository有配置文件，要配***Mappr.xml
+（
+主程序加上@MapperScan("com.kwbbin.dao")扫描dao接口，yml记得配置
+datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/student?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 19971207
+
+mybatis:
+  ##xml文件的路径配置
+  mapper-locations: classpath:static/mapper/*.xml
+  type-aliases-package: com.kwbbin.bean
+）

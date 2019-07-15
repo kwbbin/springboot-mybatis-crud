@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="static/js/vue/vue.js"></script>
+    <script src="static/js/vue/vue-axios.js"></script>
+    <script src="static/js/vue/Qs.js"></script>
+    <script>
+    </script>
+</head>
+<body>
+    <h2>hello world</h2>
+    <br>
+    <div id="app">
+        <div><span>请输入要查询的ID： </span><input ref="inputId" v-model="id" type="text"><button v-on:click="getData()">提交</button></div>
+        <div ref="print" v-text="mydata">{{mydata}}</div>
+        <div><span>请输入要删除的ID： </span><input ref="inputIdDelete" v-model="idDelete" type="text"><button v-on:click="deleteData()">提交</button></div>
+        <div>
+            <p>############################# 修改 #########################</p>
+            <div><span>id：</span><input v-model="idUpdate" type="text"><button v-on:click="getData2()">查询</button></div>
+            <div><span>name：</span><input v-model="updateName" type="text"></div>
+            <div><span>sex：</span><input v-model="updateSex" type="text"></div>
+            <p><button v-on:click="updateData()">确认修改</button> <button v-on:click="addData()">确认添加</button></p>
+        </div>
+    </div>
+
+
+</body>
+<script src="static/js/index.js"></script>
+</html>
